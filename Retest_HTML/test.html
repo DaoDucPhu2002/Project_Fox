@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chia trang 3 phần theo chiều dọc</title>
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr 1fr;
+            /* 3 cột bằng nhau */
+            height: 100vh;
+            /* Chiều cao toàn màn hình */
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .section:nth-child(1) {
+            background-color: #9b59b6;
+        }
+
+        .section:nth-child(2) {
+            background-color: #1abc9c;
+        }
+
+        .section:nth-child(3) {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">Phần 1</div>
+    <div class="section">Phần 2</div>
+    <div class="section">Phần 3</div>
+</body>
+
+</html>

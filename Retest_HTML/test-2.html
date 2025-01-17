@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button với Add</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #radio-container {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Thêm lựa chọn radio</h1>
+    <div id="radio-container">
+        <label><input type="radio" name="options" value="Option 1"> Option 1</label><br>
+        <label><input type="radio" name="options" value="Option 2"> Option 2</label><br>
+    </div>
+    <button id="add-button">Add</button>
+
+    <script>
+        // JavaScript để thêm lựa chọn mới
+        const addButton = document.getElementById('add-button');
+        const radioContainer = document.getElementById('radio-container');
+        let optionCount = 2; // Số lựa chọn ban đầu
+
+        addButton.addEventListener('click', () => {
+            optionCount++; // Tăng số lựa chọn
+            const newOption = document.createElement('label');
+            newOption.innerHTML = `<input type="radio" name="options" value="Option ${optionCount}"> Option ${optionCount}`;
+            radioContainer.appendChild(newOption);
+            radioContainer.appendChild(document.createElement('br')); // Thêm dòng mới
+        });
+    </script>
+</body>
+
+</html>

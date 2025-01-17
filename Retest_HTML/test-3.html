@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1 class="title-table">Styling HTML Tables / CSS</h1>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Select</th> <!-- Added header for the checkbox column -->
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Rows will be generated here -->
+        </tbody>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+
+    <script>
+        // Fetch JSON data and generate table rows
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('table-body');
+                data.forEach(row => {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <th>${row.column1}</th>
+                        <th>${row.column2}</th>
+                        <th>${row.column3}</th>
+                        <th>${row.column4}</th>
+                        <th><input type="checkbox"></th>
+                    `;
+                    tableBody.appendChild(newRow);
+                });
+            });
+
+        function addRow() {
+            const tableBody = document.getElementById('table-body');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th><input type="checkbox"></th>
+            `;
+            tableBody.appendChild(newRow);
+        }
+    </script>
+</body>
+
+</html>
