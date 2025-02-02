@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <!-- <h1 class="title">3070 Restest System</h1> -->
+    <div class="section" id="machine-id-section">
+        <h1 class="title-machine">Machine</h1>
+
+    </div>
+    <div class="section" id="table-content-section">
+        <h1 class="title-table">Styling HTML Tables / CSS</h1>
+        <h2 class="fixture-name" id="fixture-name">Fixture: </h2>
+        <div class="table-container">
+
+
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th class="table-col-1">STT</th>
+                        <th class="table-col-2">Components</th>
+                        <th class="table-col-3">Counter</th>
+                        <th class="table-col-4">Other</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows will be generated here -->
+                </tbody>
+            </table>
+        </div>
+        <!-- <button onclick="addRow()">Add Row</button> -->
+    </div>
+    <div class="section" id="control-panel">
+        <h1>Control Panel</h1>
+        <div class="table-options-text">Options</div>
+        <!-- Raido options check for nodes, for Vtep, for analog component -->
+        <div class="radio-options-container">
+            <input class="options-radio" type="radio" id="nodes_in" name="options" value="nodes" checked>
+            <label class="options-label" for="nodes_in">Nodes</label>
+            <input class="options-radio" type="radio" id="vtep_in" name="options" value="vtep">
+            <label class="options-label" for="vtep_in">Vtep</label>
+            <input class="options-radio" type="radio" id="analog_in" name="options" value="analog">
+            <label class="options-label" for="analog_in">Analog</label>
+        </div>
+        <!-- Button control Delete Select and Delete All -->
+        <div class="table-options-text">Delete Option</div>
+        <div class="button-control">
+            <button class="btn delete-all" onclick="deleteAll()">Delete All</button>
+            <button class="btn delete" onclick="deleteSelected()">Delete Selected</button>
+        </div>
+        <!-- Link Script -->
+        <!-- <script src="/js/script.js"></script> -->
+
+</body>
+
+</html>

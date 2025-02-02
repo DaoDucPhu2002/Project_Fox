@@ -1,0 +1,177 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 0.6fr 1.5fr 0.5fr;
+  height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.section:nth-child(1) {
+  background-color: #d5ed9f;
+}
+.section:nth-child(2) {
+  background-color: #ffffff;
+}
+.section:nth-child(3) {
+  background-color: #fffbe6;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 1000px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  /* text-align: left; */
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.table-container {
+  max-height: 750px;
+  overflow-y: auto;
+}
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.content-table th:nth-child(1),
+.content-table td:nth-child(1) {
+  width: 10%;
+  text-align: center;
+}
+.content-table th:nth-child(2),
+.content-table td:nth-child(2) {
+  width: 50%;
+  text-align: left;
+}
+.content-table th:nth-child(3),
+.content-table td:nth-child(3) {
+  width: 20%;
+  text-align: center;
+}
+
+.content-table th:nth-child(4),
+.content-table td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+/* Machine ID CLASS */
+.title-machine {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 40px 0;
+}
+
+.radio-label {
+  display: inline-block;
+  padding: 30px 100px;
+  margin: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #00712d;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.machine-id {
+  display: none;
+}
+
+.machine-id:checked + .radio-label {
+  background-color: #ff9100;
+  color: white;
+  border-color: #ff9111;
+}
+
+/* Control Panel Css */
+.table-options-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  /* margin: 20px 0; */
+}
+.options-radio {
+  display: none;
+}
+.radio-options-container {
+  margin: 20px 0;
+}
+.options-radio:checked + .options-label {
+  background-color: #ff9100;
+  color: white;
+  border-color: #ff9111;
+}
+.options-label {
+  display: inline-block;
+  padding: 15px 20px;
+  height: 20px;
+  width: 60px;
+  justify-content: center;
+  justify-items: center;
+  /* margin: 10px; */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #00712d;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.button-control {
+  margin: 20px 0;
+}
+/* button {
+  display: none;
+} */
+.btn-label {
+  display: inline-block;
+  padding: 15px 20px;
+  height: 20px;
+  width: 90px;
+  justify-content: center;
+  justify-items: center;
+  /* margin: 10px; */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #00712d;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.btn {
+  background-color: #4caf50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the buttons appear side by side */
+  font-size: 16px; /* Increase font size */
+  margin: 4px 2px; /* Some margin */
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 12px; /* Rounded corners */
+}
+
+.btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

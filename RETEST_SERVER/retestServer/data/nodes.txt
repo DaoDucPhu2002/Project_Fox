@@ -1,0 +1,4 @@
+node1         1
+node2            5
+node4             15
+node10        12

@@ -1,0 +1,10 @@
+{
+    "analog": [
+        {
+            "component": "2component1",
+            "counter": 1
+        }
+    ],
+    "nodes": [],
+    "vtep": []
+}

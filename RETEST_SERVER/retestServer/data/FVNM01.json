@@ -1,0 +1,32 @@
+{
+    "analog": [
+        {
+            "component": "1component1",
+            "counter": 1
+        }
+    ],
+    "nodes": [
+        {
+            "component": "1node2",
+            "counter": 2
+        },
+        {
+            "component": "1node3",
+            "counter": 3
+        }
+    ],
+    "vtep": [
+        {
+            "component": "1vtep1",
+            "counter": 1
+        },
+        {
+            "component": "1vtep2",
+            "counter": 2
+        },
+        {
+            "component": "1vtep3",
+            "counter": 3
+        }
+    ]
+}
